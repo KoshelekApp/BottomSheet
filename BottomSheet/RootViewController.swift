@@ -19,6 +19,15 @@ class RootViewController: UIViewController {
 
     @objc
     func presentVCInBottomSheet() {
-    
+        let firstVC = FirstViewController()
+        let bottomSheet = BSNavigationController(rootViewController: firstVC)
+        firstVC.nextTapHandler = {
+            let secondVC = SecondViewController()
+            secondVC.backTapHandler = {
+                bottomSheet.popViewController(animated: true)
+            }
+            bottomSheet.pushViewController(secondVC, animated: true)
+        }
+        present(bottomSheet, animated: true)
     }
 }
