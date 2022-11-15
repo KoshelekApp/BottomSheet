@@ -21,6 +21,10 @@
 		98851923288C66E500AA7617 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98851922288C66E500AA7617 /* TextViewController.swift */; };
 		98851925288DCA4700AA7617 /* CoverVerticalDismissAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98851924288DCA4600AA7617 /* CoverVerticalDismissAnimatedTransitioning.swift */; };
 		98851927288DCA5D00AA7617 /* CoverVerticalPresentAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98851926288DCA5D00AA7617 /* CoverVerticalPresentAnimatedTransitioning.swift */; };
+		98E63BCB291D9CF9003D85E9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E63BC9291D9CF9003D85E9 /* FirstViewController.swift */; };
+		98E63BCC291D9CF9003D85E9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E63BCA291D9CF9003D85E9 /* SecondViewController.swift */; };
+		98E63BD0291D9D09003D85E9 /* BSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E63BCE291D9D09003D85E9 /* BSNavigationController.swift */; };
+		98E63BD1291D9D09003D85E9 /* BSNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E63BCF291D9D09003D85E9 /* BSNavigationView.swift */; };
 		98E6C65428EF3D0C007F9ABE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6C65328EF3D0C007F9ABE /* RootView.swift */; };
 		98E6C65628F3653A007F9ABE /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6C65528F3653A007F9ABE /* UIColor+Hex.swift */; };
 		98E6C65A28F4B9A2007F9ABE /* UIColor+Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6C65928F4B9A2007F9ABE /* UIColor+Tokens.swift */; };
@@ -45,6 +49,10 @@
 		98851922288C66E500AA7617 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		98851924288DCA4600AA7617 /* CoverVerticalDismissAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverVerticalDismissAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		98851926288DCA5D00AA7617 /* CoverVerticalPresentAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverVerticalPresentAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		98E63BC9291D9CF9003D85E9 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		98E63BCA291D9CF9003D85E9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		98E63BCE291D9D09003D85E9 /* BSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNavigationController.swift; sourceTree = "<group>"; };
+		98E63BCF291D9D09003D85E9 /* BSNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNavigationView.swift; sourceTree = "<group>"; };
 		98E6C65328EF3D0C007F9ABE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		98E6C65528F3653A007F9ABE /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		98E6C65928F4B9A2007F9ABE /* UIColor+Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tokens.swift"; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 		9801728128C2197900265FA6 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				98E63BC8291D9CF9003D85E9 /* NavigationControllers */,
 				98851922288C66E500AA7617 /* TextViewController.swift */,
 			);
 			path = Content;
@@ -115,6 +124,7 @@
 		9869E107287EAEEB00052E48 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				98E63BCD291D9D09003D85E9 /* Navigation */,
 				9801728128C2197900265FA6 /* Content */,
 				9801728028C2103800265FA6 /* Transition */,
 				9801727628C2054A00265FA6 /* Extensions */,
@@ -128,6 +138,24 @@
 				9869E116287EAEED00052E48 /* Info.plist */,
 			);
 			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		98E63BC8291D9CF9003D85E9 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				98E63BC9291D9CF9003D85E9 /* FirstViewController.swift */,
+				98E63BCA291D9CF9003D85E9 /* SecondViewController.swift */,
+			);
+			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		98E63BCD291D9D09003D85E9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				98E63BCE291D9D09003D85E9 /* BSNavigationController.swift */,
+				98E63BCF291D9D09003D85E9 /* BSNavigationView.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E63BD0291D9D09003D85E9 /* BSNavigationController.swift in Sources */,
 				98851921288C660C00AA7617 /* BSPresentationController.swift in Sources */,
 				98E6C65A28F4B9A2007F9ABE /* UIColor+Tokens.swift in Sources */,
 				9869E11D287EB66500052E48 /* BSTransitioningDelegate.swift in Sources */,
@@ -210,8 +239,11 @@
 				98851923288C66E500AA7617 /* TextViewController.swift in Sources */,
 				9869E10D287EAEEB00052E48 /* RootViewController.swift in Sources */,
 				9801727B28C2057300265FA6 /* CGFloat+Extension.swift in Sources */,
+				98E63BCB291D9CF9003D85E9 /* FirstViewController.swift in Sources */,
 				98E6C65428EF3D0C007F9ABE /* RootView.swift in Sources */,
 				98E6C65C28F4BB67007F9ABE /* UIFont+Token.swift in Sources */,
+				98E63BD1291D9D09003D85E9 /* BSNavigationView.swift in Sources */,
+				98E63BCC291D9CF9003D85E9 /* SecondViewController.swift in Sources */,
 				98851927288DCA5D00AA7617 /* CoverVerticalPresentAnimatedTransitioning.swift in Sources */,
 				98E6C65E28F4CA94007F9ABE /* UIImage+Extension.swift in Sources */,
 				9801727A28C2057300265FA6 /* UIPanGestureRecognizer+Extension.swift in Sources */,
@@ -363,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z634D5L4B3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BottomSheet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -392,7 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z634D5L4B3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BottomSheet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

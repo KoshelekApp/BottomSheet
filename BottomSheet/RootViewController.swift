@@ -16,4 +16,9 @@ class RootViewController: UIViewController {
         vc.modalPresentationStyle = .custom
         present(vc, animated: true)
     }
+
+    @objc
+    func presentVCInBottomSheet() {
+    
+    }
 }

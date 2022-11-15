@@ -21,7 +21,7 @@ final class RootView: UIView {
         label.textColor = .primaryText
         label.textAlignment = .center
         label.font = .header1
-        label.text = "Bottom Sheet Example"
+        label.text = "Bottom Sheet Examples"
         return label
     }()
 
@@ -43,6 +43,24 @@ final class RootView: UIView {
         return button
     }()
 
+    private lazy var openInBottomSheetButton: UIButton = {
+        let button = UIButton()
+        button.contentHorizontalAlignment = .left
+        button.setImage(UIImage(named: "ic_open_nav"), for: .normal)
+        button.setTitle("Open bottom sheet navigation ", for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        button.setTitleColor(.primaryText, for: .normal)
+        button.backgroundColor = .primaryAction
+        button.layer.cornerRadius = Constants.buttonCornerRadius
+        button.addTarget(
+            nil,
+            action: #selector(RootViewController.presentVCInBottomSheet),
+            for: .touchUpInside
+        )
+        return button
+    }()
+
     init() {
         super.init(frame: .zero)
 
@@ -58,6 +76,7 @@ final class RootView: UIView {
         stackView.addArrangedSubview(logoImageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(openAsBottomSheetButton)
+        stackView.addArrangedSubview(openInBottomSheetButton)
 
         stackView.setCustomSpacing(40, after: logoImageView)
         stackView.setCustomSpacing(30, after: titleLabel)
@@ -68,6 +87,7 @@ final class RootView: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             openAsBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
+            openInBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight)
         ])
 
         backgroundColor = .primaryBackground
