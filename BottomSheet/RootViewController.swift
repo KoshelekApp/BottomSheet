@@ -30,4 +30,9 @@ class RootViewController: UIViewController {
         }
         present(bottomSheet, animated: true)
     }
+
+    @objc
+    func presentCollectionAsBottomSheet() {
+
+    }
 }

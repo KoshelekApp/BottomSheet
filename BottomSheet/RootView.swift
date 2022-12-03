@@ -43,6 +43,24 @@ final class RootView: UIView {
         return button
     }()
 
+    private lazy var openCollectionAsBottomSheetButton: UIButton = {
+        let button = UIButton()
+        button.contentHorizontalAlignment = .left
+        button.setImage(UIImage(named: "ic_open_list"), for: .normal)
+        button.setTitle("Open collection as bottom sheet", for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        button.setTitleColor(.primaryText, for: .normal)
+        button.backgroundColor = .primaryAction
+        button.layer.cornerRadius = Constants.buttonCornerRadius
+        button.addTarget(
+            nil,
+            action: #selector(RootViewController.presentCollectionAsBottomSheet),
+            for: .touchUpInside
+        )
+        return button
+    }()
+
     private lazy var openInBottomSheetButton: UIButton = {
         let button = UIButton()
         button.contentHorizontalAlignment = .left
@@ -77,6 +95,7 @@ final class RootView: UIView {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(openAsBottomSheetButton)
         stackView.addArrangedSubview(openInBottomSheetButton)
+        stackView.addArrangedSubview(openCollectionAsBottomSheetButton)
 
         stackView.setCustomSpacing(40, after: logoImageView)
         stackView.setCustomSpacing(30, after: titleLabel)
@@ -87,7 +106,8 @@ final class RootView: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             openAsBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
-            openInBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight)
+            openInBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
+            openCollectionAsBottomSheetButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight)
         ])
 
         backgroundColor = .primaryBackground
