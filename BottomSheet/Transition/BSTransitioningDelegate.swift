@@ -2,12 +2,16 @@ import UIKit
 
 final class BSTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
 
+    private var driver: BSTransitionDriver?
+
     func presentationController(
         forPresented presented: UIViewController,
         presenting: UIViewController?,
         source: UIViewController
     ) -> UIPresentationController? {
-        BSPresentationController(
+        driver = BSTransitionDriver(controller: presented)
+
+        return BSPresentationController(
             presentedViewController: presented,
             presenting: presenting ?? source
         )
@@ -25,5 +29,11 @@ final class BSTransitioningDelegate: NSObject, UIViewControllerTransitioningDele
         forDismissed dismissed: UIViewController
     ) -> UIViewControllerAnimatedTransitioning? {
         CoverVerticalDismissAnimatedTransitioning()
+    }
+
+    func interactionControllerForDismissal(
+        using animator: UIViewControllerAnimatedTransitioning
+    ) -> UIViewControllerInteractiveTransitioning? {
+        driver
     }
 }

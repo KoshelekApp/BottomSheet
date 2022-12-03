@@ -11,6 +11,12 @@ final class CoverVerticalDismissAnimatedTransitioning: NSObject, UIViewControlle
         let animator = makeAnimator(using: transitionContext)
         animator?.startAnimation()
     }
+
+    func interruptibleAnimator(
+        using transitionContext: UIViewControllerContextTransitioning
+    ) -> UIViewImplicitlyAnimating {
+        makeAnimator(using: transitionContext) ?? UIViewPropertyAnimator()
+    }
     
     private func makeAnimator(
         using transitionContext: UIViewControllerContextTransitioning

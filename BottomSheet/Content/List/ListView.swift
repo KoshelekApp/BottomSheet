@@ -2,7 +2,7 @@ import UIKit
 
 final class ListView: UIView {
 
-    lazy var collectionView: UICollectionView = {
+    lazy var collectionView: CompactCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(
@@ -16,7 +16,7 @@ final class ListView: UIView {
             bottom: 0,
             right: Constants.inset
         )
-        let collectionView = UICollectionView(
+        let collectionView = CompactCollectionView(
             frame: .zero,
             collectionViewLayout: layout
         )

@@ -19,4 +19,3 @@ final class ListDataProvider {
         static var imageDog3: UIImage { UIImage(named: "dog_3") ?? UIImage() }
     }
 }
-

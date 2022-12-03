@@ -33,6 +33,9 @@ class RootViewController: UIViewController {
 
     @objc
     func presentCollectionAsBottomSheet() {
-
+        let vc = ListViewController()
+        vc.transitioningDelegate = customTransitioningDelegate
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true)
     }
 }
